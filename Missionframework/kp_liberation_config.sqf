@@ -51,7 +51,8 @@ KP_liberation_medical_vehicles = [
     "uns_ch47a_medevac",
     "uns_H13_medevac_CAV",
     "uns_M577_amb",
-    "uns_uh1D_med"
+    "uns_uh1D_med",
+	"LIB_US_GMC_Ambulance"
 ];
 
 // Building classnames which also function as ACE medical facilities.
@@ -176,7 +177,7 @@ KP_liberation_preset_civilians = 0;
 14 = CSAT Green Hex arsenal preset
 15 = AAF arsenal preset
 16 = LDF arsenal preset */
-KP_liberation_arsenal = 0;
+KP_liberation_arsenal = 1;
 
 /* - Fuel consumption settings.
 Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine. */
@@ -205,7 +206,7 @@ GRLIB_color_enemy_bright = "ColorRED";                                  // Enemy
 GRLIB_fob_range = 125;                                                  // Build range around the main FOB building.
 GRLIB_halo_altitude = 2500;                                             // Altitude in metres for the HALO jump.
 GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
-GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
+GRLIB_secondary_objective_impact = 0.75;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 0.5;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 30;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
@@ -225,12 +226,12 @@ GRLIB_sector_cap = 180;                                                 // Cap f
 GRLIB_battlegroup_cap = 150;                                            // Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150;                                                 // Cap for enemy patrols.
 
-KP_liberation_cr_kill_penalty = 5;                                      // Civil Reputation penalty for killing a civilian.
-KP_liberation_cr_building_penalty = 3;                                  // Civil Reputation penalty for destroying/damaging a building.
-KP_liberation_cr_vehicle_penalty = 2;                                   // Civil Reputation penalty for stealing a civilian vehicle.
-KP_liberation_cr_resistance_penalty = 3;                                // Civil Reputation penalty for killing a friendly resistance soldier.
+KP_liberation_cr_kill_penalty = 2;                                      // Civil Reputation penalty for killing a civilian.
+KP_liberation_cr_building_penalty = 1;                                  // Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_vehicle_penalty = 0;                                   // Civil Reputation penalty for stealing a civilian vehicle.
+KP_liberation_cr_resistance_penalty = 2;                                // Civil Reputation penalty for killing a friendly resistance soldier.
 KP_liberation_cr_sector_gain = 5;                                       // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 35;                                   // Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_chance = 50;                                   // Chance (0-100) that there are wounded civilians right after capturing a sector.
 KP_liberation_cr_wounded_gain = 2;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 5400;                                       // Civil Informant minimum spawn time. (seconds)
@@ -246,7 +247,7 @@ KP_liberation_convoy_ambush_duration = 1200;                            // Durat
 
 KP_liberation_resistance_tier2 = 30;                                    // At which strength (0-100) the guerilla forces will be at tier 2?
 KP_liberation_resistance_tier3 = 70;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
-KP_liberation_resistance_at_chance = 20;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
+KP_liberation_resistance_at_chance = 0;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
 KP_liberation_resistance_sector_chance = 35;                            // Chance that a guerilla squad will join an ongoing sector attack.
 KP_liberation_resistance_ambush_chance = 25;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
@@ -277,7 +278,8 @@ KP_liberation_suppMod_whitelist = [
 /* Array of radio tower classnames to place at radio tower sectors.
 If more than one is added, it'll be selected random for each sector on campaign start. */
 KPLIB_radioTowerClassnames = [
-    "Land_Communication_F"
+    "Land_Vysilac_FM",
+	"Land_Vysilac_FM2"
 ];
 
 /* - Default arsenal blacklist method.
@@ -423,122 +425,71 @@ blacklisted_from_arsenal = [
     "uns_MK18_low_US_Bag",
     "uns_STABO_US_Bag",
     "uns_Tripod_Bag",
-    "Uns_US_searchlight_Bag"
+    "Uns_US_searchlight_Bag",
+	"tf_anprc152",
+	"ACE_M84",
+	"SmokeShell",
+	"HandGrenade",
+	"SmokeShellYellow",
+	"SmokeShellRed",
+	"SmokeShellPurple",
+	"SmokeShellOrange",
+	"SmokeShellGreen",
+	"SmokeShellBlue",
+	"ACE_HandFlare_Yellow",
+	"ACE_HandFlare_White",
+	"ACE_HandFlare_Red",
+	"ACE_HandFlare_Green",
+	"O_R_IR_Grenade",
+	"B_IR_Grenade",
+	"ACE_M14",
+	"Chemlight_blue",
+	"Chemlight_green",
+	"ACE_Chemlight_HiBlue",
+	"ACE_Chemlight_HiGreen",
+	"ACE_Chemlight_HiRed",
+	"ACE_Chemlight_HiWhite",
+	"ACE_Chemlight_HiYellow",
+	"ACE_Chemlight_IR",
+	"ACE_Chemlight_Orange",
+	"Chemlight_red",
+	"ACE_Chemlight_White",
+	"ACE_Chemlight_UltraHiOrange",
+	"Chemlight_yellow",
+	"ACE_CTS9",
+	"APERSMineDispenser_Mag",
+	"I_IR_Grenade",
+	"O_IR_Grenade",
+	"I_E_IR_Grenade",
+	"I_IR_Grenade",
+	"O_IR_Grenade",
+	"I_E_IR_Grenade",
+	"SmokeShell",
+	"ACE_M84",
+	"DemoCharge_Remote_Mag",
+	"TrainingMine_Mag",
+	"ClaymoreDirectionalMine_Remote_Mag",
+	"APERSBoundingMine_Range_Mag",
+	"SLAMDirectionalMine_Wire_Mag",
+	"APERSTripMine_Wire_Mag",
+	"ACE_FlareTripMine_Mag",
+	"APERSMine_Range_Mag",
+	"IEDUrbanSmall_Remote_Mag",
+	"IEDLandSmall_Remote_Mag",
+	"MiniGrenade"
 ];
 
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
 KP_liberation_allowed_items_extension = [
-    "ACE_Chemlight_Shield_Blue",
-    "ACE_Chemlight_Shield_Green",
-    "ACE_Chemlight_Shield_Orange",
-    "ACE_Chemlight_Shield_Red",
-    "ACE_Chemlight_Shield_White",
-    "ACE_Chemlight_Shield_Yellow",
-    "ACE_launch_NLAW_Used_F",
-    "ACE_PreloadedMissileDummy_CUP",
-    "ACE_PreloadedMissileDummy_Igla_CUP",
-    "ACE_PreloadedMissileDummy_M72A6_CUP",
-    "ACE_PreloadedMissileDummy_NLAW_CUP",
-    "ACE_PreloadedMissileDummy_RPG18_CUP",
-    "ACE_PreloadedMissileDummy_Stinger_CUP",
-    "ACE_PreloadedMissileDummy_Strela_2_CUP",
-    "ACE_ReserveParachute",
-    "BWA3_acc_LLM01_flash_tan",
-    "BWA3_acc_LLM01_flash_underbarrel",
-    "BWA3_acc_LLM01_flash",
-    "BWA3_acc_LLM01_laser_tan",
-    "BWA3_acc_LLM01_laser_underbarrel",
-    "BWA3_acc_LLM01_laser",
-    "BWA3_acc_VarioRay_flash",
-    "BWA3_acc_VarioRay_laser",
-    "BWA3_Bunkerfaust",
-    "BWA3_G36A2_pip",
-    "BWA3_G36A2_tan_pip",
-    "BWA3_optic_CompM2_G36A2",
-    "BWA3_optic_CompM2_tan_G36A2",
-    "BWA3_optic_EOTech_G36A2",
-    "BWA3_optic_EOTech_Mag_Off",
-    "BWA3_optic_EOTech_Mag_On",
-    "BWA3_optic_EOTech_sand_G36A2",
-    "BWA3_optic_EOTech_tan_Mag_Off",
-    "BWA3_optic_EOTech_tan_Mag_On",
-    "BWA3_optic_EOTech552_G36A2",
-    "BWA3_optic_EOTech552_tan_G36A2",
-    "BWA3_optic_Hensoldt_NSV",
-    "BWA3_optic_M5Xi_MSR_MicroT2_pip",
-    "BWA3_optic_M5Xi_MSR_pip",
-    "BWA3_optic_M5Xi_Tremor3_MicroT2_pip",
-    "BWA3_optic_M5Xi_Tremor3_pip",
-    "BWA3_optic_MicroT1_G36A2",
-    "BWA3_optic_MicroT2_G36A2",
-    "BWA3_optic_NSA80_G36",
-    "BWA3_optic_PMII_DMR_MicroT1_front_NSV_pip",
-    "BWA3_optic_PMII_DMR_MicroT1_front_NSV",
-    "BWA3_optic_PMII_DMR_MicroT1_front_pip",
-    "BWA3_optic_PMII_DMR_MicroT1_rear_NSV_pip",
-    "BWA3_optic_PMII_DMR_MicroT1_rear_NSV",
-    "BWA3_optic_PMII_DMR_MicroT1_rear_pip",
-    "BWA3_optic_PMII_DMR_NSV_pip",
-    "BWA3_optic_PMII_DMR_NSV",
-    "BWA3_optic_PMII_DMR_pip",
-    "BWA3_optic_PMII_ShortdotCC_pip",
-    "BWA3_optic_RSAS_brown_G36A2",
-    "BWA3_optic_RSAS_G36A2",
-    "BWA3_optic_RSAS_sand_G36A2",
-    "BWA3_optic_RSAS_tan_G36A2",
-    "BWA3_optic_ZO4x30_brown_IRV",
-    "BWA3_optic_ZO4x30_brown_NSV",
-    "BWA3_optic_ZO4x30_brown_pip",
-    "BWA3_optic_ZO4x30_brown_RSAS_IRV_pip",
-    "BWA3_optic_ZO4x30_brown_RSAS_IRV",
-    "BWA3_optic_ZO4x30_brown_RSAS_NSV_pip",
-    "BWA3_optic_ZO4x30_brown_RSAS_NSV",
-    "BWA3_optic_ZO4x30_brown_RSAS_pip",
-    "BWA3_optic_ZO4x30_IRV",
-    "BWA3_optic_ZO4x30_MicroT2_brown_IRV",
-    "BWA3_optic_ZO4x30_MicroT2_brown_NSV",
-    "BWA3_optic_ZO4x30_MicroT2_IRV",
-    "BWA3_optic_ZO4x30_MicroT2_NSV",
-    "BWA3_optic_ZO4x30_NSV",
-    "BWA3_optic_ZO4x30_pip",
-    "BWA3_optic_ZO4x30_RSAS_IRV_pip",
-    "BWA3_optic_ZO4x30_RSAS_IRV",
-    "BWA3_optic_ZO4x30_RSAS_NSV_pip",
-    "BWA3_optic_ZO4x30_RSAS_NSV",
-    "BWA3_optic_ZO4x30_RSAS_pip",
-    "BWA3_optic_ZO4x30i_MicroT2_pip",
-    "BWA3_optic_ZO4x30i_MicroT2_sand_pip",
-    "BWA3_optic_ZO4x30i_pip",
-    "BWA3_optic_ZO4x30i_RSAS_pip",
-    "BWA3_optic_ZO4x30i_RSAS_sand_pip",
-    "BWA3_optic_ZO4x30i_sand_pip",
-    "BWA3_PzF3_Used",
-    "BWA3_PzF3",
-    "BWA3_RGW90_Used",
-    "BWA3_RGW90",
-    "ItemRadioAcreFlagged",
-    "rhs_acc_ekp8_18b",
-    "rhs_acc_ekp8_18c",
-    "rhs_acc_ekp8_18d",
-    "rhs_m136_hedp_mag",
-    "rhs_m136_hp_mag",
-    "rhs_m136_mag",
-    "rhs_m72a7_mag",
-    "rhs_rpg26_mag",
-    "rhs_rshg2_mag",
-    "rhs_weap_M136_used",
-    "rhsusf_acc_anpeq15_bk_light_h",
-    "rhsusf_acc_g33_T1_flip",
-    "rhsusf_acc_g33_xps3_flip",
-    "rhsusf_acc_g33_xps3_tan_flip",
-    "sma_spitfire_03_rds_low_ard_red",
-    "UK3CB_BAF_AT4_CS_AP_Mag",
-    "UK3CB_BAF_Javelin_Launcher"
+
 ];
 
 /* - Configuration settings for crates transported by vehicles.
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */
 KPLIB_transportConfigs = [
+	["LIB_US_GMC_Tent", -6.5, [0,-1.7,0.4]],
+	["LIB_US_GMC_Open", -6.5, [0,-1.7,0.4]],
+	["LIB_US_M3_Halftrack", -6.5, [0,-1.7,0.4]],
     ["B_Heli_Transport_03_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_Heli_Transport_03_unarmed_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_T_Truck_01_cargo_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
@@ -751,7 +702,8 @@ KPLIB_aiResupplySources = [
     "sfp_tgb40_ammo",
     "uns_M113_ENG",
     "uns_M35A2_ammo",
-    "uns_motorpool1_repair"
+    "uns_motorpool1_repair",
+	"LIB_US_GMC_Ammo"
 ];
 
 // Everything that can resupply other vehicles.
@@ -794,7 +746,8 @@ vehicle_repair_sources = [
     "UNS_Hanger_repair",
     "uns_M113_ENG",
     "uns_M35A2_repair",
-    "uns_motorpool1_repair"
+    "uns_motorpool1_repair",
+	"LIB_US_GMC_Parm"
 ];
 
 vehicle_rearm_sources = [
@@ -835,7 +788,8 @@ vehicle_rearm_sources = [
     "rhsusf_M977A4_AMMO_usarmy_wd",
     "sfp_tgb40_ammo",
     "uns_M113_ENG",
-    "uns_M35A2_ammo"
+    "uns_M35A2_ammo",
+	"LIB_US_GMC_Ammo"
 ];
 
 vehicle_refuel_sources = [
@@ -877,7 +831,8 @@ vehicle_refuel_sources = [
     "sfp_tgb40_fuel",
     "uns_M113_ENG",
     "uns_M35A2_fuel",
-    "uns_M35A2_fueltanker"
+    "uns_M35A2_fueltanker",
+	"LIB_US_GMC_Fuel"
 ];
 
 // Classnames of boats, so they can be built on water.
