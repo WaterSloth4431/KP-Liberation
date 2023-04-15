@@ -1,0 +1,3 @@
+# WW2-KP-Liberation
+The work on GreuhZbugs Liberation Mission for Arma 3 continues...
+special thanks to Luca/Edited by Jammi for the into graphics and side mission graphics
