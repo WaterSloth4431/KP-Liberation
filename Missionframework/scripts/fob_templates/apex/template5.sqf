@@ -1,69 +1,72 @@
-private _objects_to_build = [
-    ["Land_BarGate_F", [-1.56, -21.23, 0.00], 180.00],
-    ["Land_Cargo_House_V4_F", [-15.99, -15.32, 0.00], 180.00],
-    ["Land_Cargo_House_V4_F", [-8.30, -15.39, 0.00], 180.00],
-    ["Land_Cargo_Patrol_V4_F", [-17.07, 15.12, 0.00], 90.00],
-    ["Land_Cargo_Patrol_V4_F", [15.11, -18.26, 0.00], 0.00],
-    ["Land_Cargo_Tower_V4_F", [14.91, 13.60, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [-15.68, 20.47, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [-16.02, -21.09, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [-20.99, 17.26, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [-21.00, -0.12, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [-21.00, 8.55, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [-21.13, -8.80, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [-21.39, -17.39, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [-7.33, 20.43, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [-7.69, -21.22, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [1.12, 20.34, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [11.11, -21.90, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [18.02, 20.28, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [19.55, -21.95, 0.00], 0.00],
-    ["Land_HBarrier_01_big_4_green_F", [22.71, -16.70, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [22.81, -8.28, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [22.89, 0.29, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [23.00, 8.71, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [23.12, 17.03, 0.00], 270.00],
-    ["Land_HBarrier_01_big_4_green_F", [9.57, 20.36, 0.00], 0.00],
-    [opfor_mrap, [14.22, -4.50, -0.00], 270.00]
+_objects_to_build = [
+[ "Land_HelipadEmpty_F", [-1.31, 11.44, 0], 0 ],
+[ opfor_transport_helo, [-1.31, 11.45, 0], 134.19 ],
+[ "Land_Misc_deerstand", [17.36, 1.08, 0], 269.81 ],
+[ "Land_tent_east", [15.93, -7.13, 0], 90.12 ],
+[ "LIB_Static_zis6_radar", [-11.82, -13.91, 0], 89.97 ],
+[ opfor_transport_truck, [-17.59, 5.76, -0.03], 310.87 ],
+[ opfor_flag, [-20.4, -2.8, 0], 90 ],
+[ "Land_PaperBox_open_full_F", [12.36, -16.46, 0], 228.14 ],
+[ opfor_flag, [20.06, 6.22, 0], 90 ],
+[ "Land_PaperBox_open_empty_F", [14.86, -16.08, 0], 2.94 ],
+[ "Land_PaperBox_closed_F", [13.68, -18.27, 0], 287.62 ],
+[ "Land_HBarrierBig_F", [-22.99, -3.72, 0], 89.34 ],
+[ "CamoNet_OPFOR_open_F", [14.88, -18.51, 0], 0 ],
+[ "Land_HBarrierBig_F", [22.88, 3.58, 0], 89.34 ],
+[ opfor_mrap, [17.18, 16.24, 0.01], 326.13 ],
+[ "Land_HBarrierBig_F", [23.08, -5.21, 0], 89.34 ],
+[ "Land_HBarrierBig_F", [0.66, -24.24, 0], 0.36 ],
+[ "Land_HBarrierBig_F", [-8.2, -24.3, 0], 0.36 ],
+[ "Land_HBarrierBig_F", [-22.79, -12.51, 0], 89.34 ],
+[ "Land_HBarrierBig_F", [9.52, -24.42, 0], 1.39 ],
+[ "Land_HBarrierBig_F", [23.35, -14.06, 0], 89.34 ],
+[ opfor_flag, [19.21, -21.72, 0], 90 ],
+[ "Land_HBarrierBig_F", [-16.97, -24.38, 0], 0.36 ],
+[ "Land_HBarrierBig_F", [18.28, -24.49, 0], 1.39 ],
+[ "Land_HBarrierBig_F", [-22.52, -21.36, 0], 89.34 ],
+[ "Land_HBarrierBig_F", [22.45, -21.48, 0], 103.04 ]
 ];
 
-private _objectives_to_build = [
-    [opfor_ammo_truck, [15.77, -10.81, 0.00], 270.00],
-    [opfor_fuel_truck, [15.39, 1.95, 0.00], 270.00],
-    [opfor_ammo_container, [-12.54, 6.21, 0.00], 0.00],
-    [opfor_ammo_container, [-16.98, 6.38, 0.00], 0.00],
-    [opfor_fuel_container, [-12.00, -3.02, 0.00], 0.00],
-    [opfor_fuel_container, [-16.72, -3.11, 0.00], 0.00]
+_objectives_to_build = [
+[ opfor_fuel_container, [-16.82, 17.67, -0.01], 47.97 ],
+[ opfor_ammo_container, [-0.42, -3.26, 0.02], 104.66 ],
+[ opfor_fuel_container, [-9.52, -0.47, -0.04], 295.86 ],
+[ opfor_ammo_container, [2.85, -14.48, 0], 0.69 ]
 ];
 
-private _defenders_to_build = [
-    [opfor_engineer, [16.86, -0.86, 0.00], 257.93],
-    [opfor_heavygunner, [2.53, -18.79, 0.00], 162.42],
-    [opfor_medic, [-8.69, -15.93, 0.59], 0.00],
-    [opfor_sharpshooter, [-17.05, 16.71, 4.35], 272.72],
-    [opfor_sharpshooter, [10.26, 6.69, 17.79], 198.44],
-    [opfor_machinegunner, [-15.20, 1.00, 0.00], 86.01],
-    [opfor_rifleman, [-13.07, 16.89, 0.00], 139.62],
-    [opfor_rifleman, [-16.95, 13.45, 4.35], 259.48],
-    [opfor_rifleman, [-17.18, -17.18, 0.73], 0.00],
-    [opfor_rifleman, [10.74, 10.43, 15.37], 81.16],
-    [opfor_rifleman, [11.20, 10.90, 12.77], 0.00],
-    [opfor_rifleman, [12.76, -16.90, 0.00], 323.09],
-    [opfor_rifleman, [16.63, 12.67, 0.00], 229.50],
-    [opfor_rifleman, [18.63, 15.47, 17.89], 46.70],
-    [opfor_at, [-17.43, -7.40, 0.00], 101.79],
-    [opfor_rpg, [10.88, 16.67, 17.89], 313.11],
-    [opfor_sentry, [18.68, 15.42, 15.37], 240.93],
-    [opfor_marksman, [13.72, -18.55, 4.35], 210.97],
-    [opfor_squad_leader, [-14.42, -16.98, 0.73], 333.26],
-    [opfor_grenadier, [16.74, -18.14, 4.35], 172.08]
+_defenders_to_build = [
+[ opfor_engineer, [2.32, 3.25, 0], 10.12 ],
+[ opfor_engineer, [3.59, 3.89, 0], 288.05 ],
+[ opfor_engineer, [2.31, 4.93, 0], 158.22 ],
+[ opfor_rifleman, [3.96, -9.85, 0], 37.83 ],
+[ opfor_machinegunner, [-9.04, -11.04, 3.13], 48.56 ],
+[ opfor_officer, [-12.46, -12.21, 0.6], 288.05 ],
+[ opfor_aa, [-14.62, -9.64, 3.13], 335.85 ],
+[ opfor_sharpshooter, [17.7, 2.21, 4.35], 31.1 ],
+[ opfor_aa, [-7.46, -16.48, 3.09], 124.01 ],
+[ opfor_heavygunner, [18.14, -0.02, 4.35], 174.84 ],
+[ opfor_rifleman, [-13.89, -11.76, 0.6], 129.9 ],
+[ opfor_sentry, [-13.62, -13.03, 0.6], 53.89 ],
+[ opfor_sentry, [10.86, -15.42, 0], 348.81 ],
+[ opfor_sentry, [17.87, -6.07, 0.73], 294.41 ],
+[ opfor_rifleman, [12.59, -14.14, 0], 288.05 ],
+[ opfor_rifleman, [-10.49, -15.94, 0.6], 288.05 ],
+[ opfor_sentry, [-12.03, -15.74, 0.6], 105.44 ],
+[ opfor_sentry, [17.96, -8.4, 0.73], 294.41 ],
+[ opfor_sentry, [-2.5, 20.13, 0], 288.05 ],
+[ opfor_grenadier, [-5.17, 20.37, 0], 84.75 ],
+[ opfor_engineer, [-17.83, 11.21, 0], 288.05 ],
+[ opfor_at, [-13.21, -18.42, 3.13], 196.73 ],
+[ opfor_sentry, [-20.27, 11.9, 0], 112.14 ],
+[ opfor_sentry, [13.03, 19.64, 0], 348.81 ],
+[ opfor_rifleman, [14.76, 20.92, 0], 288.05 ]
 ];
 
-private _base_corners = [
-    [40, 40, 0],
-    [40, -40, 0],
-    [-40, -40, 0],
-    [-40, 40, 0]
+_base_corners = [
+[30,40,0],
+[30,-40,0],
+[-30,-40,0],
+[-30,40,0]
 ];
 
-[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]
+[ _objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners ]
