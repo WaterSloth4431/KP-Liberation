@@ -18,7 +18,7 @@ private _backpack = backpack player;
 private ["_loadouts_data"];
 // Get loadouts either from ACE or BI arsenals
 if (KP_liberation_ace && KP_liberation_arsenal_type) then {
-    _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
+    _loadouts_data = [];
 } else {
     private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
     _loadouts_data = [];
