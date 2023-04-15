@@ -60,6 +60,8 @@ loadScreen = "res\lib.paa";
 // Displays a message while the mission is loading below the loadScreen picture.
 onLoadMission = "KP Dev Team & 509th PIR";
 
+// Cba settings in mission file, if so remove comment on line below.
+//cba_settings_hasSettingsFile = 1;
 
 /*
     ----- Respawn -----
