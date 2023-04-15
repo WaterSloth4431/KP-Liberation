@@ -65,7 +65,7 @@ while {true} do {
     _standard_map_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 251);
     _frame_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 198);
 
-    // Get loadouts either from ACE or BI arsenals
+      // Get loadouts either from ACE or BI arsenals
     private ["_loadouts_data"];
     if (KP_liberation_ace && KP_liberation_arsenal_type) then {
         _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
@@ -82,10 +82,10 @@ while {true} do {
             } forEach _saved_loadouts;
         };
     };
-
     lbAdd [203, "--"];
     {lbAdd [203, _x param [0]]} forEach _loadouts_data;
     lbSetCurSel [203, 0];
+	ctrlEnable [203,false];
 
     while {dialog && alive player && deploy == 0} do {
         // ARRAY - [[NAME, POSITION(, OBJECT)], ...]
