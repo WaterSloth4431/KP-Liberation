@@ -22,8 +22,9 @@ private _ied_marker = "";
 if (_count > 0) then {
     [_sector, _count - 1] spawn manage_asymIED;
 };
-
+/*
 if (!(isnull _roadobj)) then {
+
     private _roadpos = getpos _roadobj;
     _ied_obj = createMine [_ied_type, _roadpos getPos [_spread, random (360)], [], 0];
     _ied_obj setdir (random 360);
@@ -38,12 +39,13 @@ if (!(isnull _roadobj)) then {
             stats_ieds_detonated = stats_ieds_detonated + 1; publicVariable "stats_ieds_detonated";
             _goes_boom = true;
         };
+
         sleep 1;
     };
 } else {
     if (KP_liberation_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> _roadobj is Null for IED %1 at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };
-
+*/
 if ((KP_liberation_asymmetric_debug > 0) && !(isNull _roadobj)) then {[format ["manage_asymIED.sqf -> exit IED %1 loop at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 sleep 60;

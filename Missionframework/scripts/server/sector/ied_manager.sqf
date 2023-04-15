@@ -27,7 +27,7 @@ if (KP_liberation_asymmetric_debug > 0) then {[format ["ied_manager.sqf -> spawn
 if (_number > 0) then {
     [_sector, _radius, _number - 1] spawn ied_manager;
 };
-
+/*
 if (!(isnull _roadobj)) then {
 
     _roadpos = getpos _roadobj;
@@ -49,12 +49,13 @@ if (!(isnull _roadobj)) then {
             stats_ieds_detonated = stats_ieds_detonated + 1; publicVariable "stats_ieds_detonated";
             _goes_boom = true;
         };
+
         sleep 1;
     };
 } else {
     if (KP_liberation_asymmetric_debug > 0) then {[format ["ied_manager.sqf -> _roadobj is Null for IED %1 at %2", _number, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };
-
+*/
 if ((KP_liberation_asymmetric_debug > 0) && !(isNull _roadobj)) then {[format ["ied_manager.sqf -> exited IED %1 loop at %2", _number, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 sleep 1800;
