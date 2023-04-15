@@ -1,4 +1,5 @@
-
+enableRadio false;
+enableSentences false;
 KPLIB_init = false;
 
 // Version of the KP Liberation framework
@@ -54,7 +55,10 @@ if (!isDedicated && hasInterface) then {
 if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(bis_reviveParam_mode == 0)) then {
     [] call bis_fnc_reviveInit;
 };
-
+// Execute time manager script
+if (isServer) then {
+    execVM "scripts\timeManager.sqf";
+};
 KPLIB_init = true;
 
 // Notify clients that server is ready
@@ -62,3 +66,4 @@ if (isServer) then {
     KPLIB_initServer = true;
     publicVariable "KPLIB_initServer";
 };
+
